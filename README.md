@@ -1,7 +1,3 @@
-Voici une proposition de description (README) claire et professionnelle, idéale pour mettre en valeur ce projet sur ton portfolio GitHub. Tu peux copier-coller cette structure et l'ajuster avec tes outils spécifiques.
-
----
-
 # 📊 RAG pour la Finance
 
 Un outil d'analyse et de comparaison de rapports financiers basé sur l'architecture RAG (Retrieval-Augmented Generation). Ce projet permet d'interagir avec des documents financiers complexes via un grand modèle de langage (LLM), tout en garantissant la confidentialité des données traitées.
