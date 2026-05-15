@@ -1,4 +1,4 @@
-# 📊 RAG pour la Finance
+# 📊 Secured RAG for Finance (SRAGF)
 
 Un outil d'analyse et de comparaison de rapports financiers basé sur l'architecture RAG (Retrieval-Augmented Generation). Ce projet permet d'interagir avec des documents financiers complexes via un modèle de langage (LLM), tout en garantissant la confidentialité des données traitées.
 
