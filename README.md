@@ -1,6 +1,6 @@
 # 📊 RAG pour la Finance
 
-Un outil d'analyse et de comparaison de rapports financiers basé sur l'architecture RAG (Retrieval-Augmented Generation). Ce projet permet d'interagir avec des documents financiers complexes via un grand modèle de langage (LLM), tout en garantissant la confidentialité des données traitées.
+Un outil d'analyse et de comparaison de rapports financiers basé sur l'architecture RAG (Retrieval-Augmented Generation). Ce projet permet d'interagir avec des documents financiers complexes via un modèle de langage (LLM), tout en garantissant la confidentialité des données traitées.
 
 ## ✨ Fonctionnalités Principales
 
@@ -11,46 +11,19 @@ Un outil d'analyse et de comparaison de rapports financiers basé sur l'architec
 
 ## 🛠️ Stack Technique
 
-*(À adapter selon les outils que tu as réellement utilisés)*
 
-* **Modèle / NLP :** [Nom du LLM, ex: Llama 3, Mistral, OpenAI]
-* **Orchestration RAG :** [ex: LangChain, LlamaIndex]
-* **Traitement des données :** Python, PyTorch, Pandas
-* **Interface Utilisateur :** [ex: Streamlit, Gradio] (avec support Markdown/LaTeX pour les formules)
+* **Modèle / NLP :** Qwen2.5 7B
+* **Orchestration RAG :** Langchain
+* **Backend :** Fastapi
+* **Interface Utilisateur :** Streamlit
 
-## 🚀 Installation
-
-1. Cloner le dépôt :
-
-```bash
-git clone https://github.com/ton-profil/rag-finance.git
-cd rag-finance
-
-```
-
-2. Créer un environnement virtuel et l'activer :
-
-```bash
-python -m venv venv
-source venv/bin/activate  # Sur Windows : venv\Scripts\activate
-
-```
-
-3. Installer les dépendances :
-
-```bash
-pip install -r requirements.txt
-
-```
 
 ## 💻 Utilisation
 
-1. Déposer les rapports financiers (ex: format PDF) dans le répertoire `data/`.
-2. Lancer l'interface :
+1. Lancer l'interface :
 
 ```bash
-streamlit run app.py
+streamlit run interface_web/🏠_Accueil.py
 
 ```
 
-3. Sélectionner l'option "Analyse simple" ou "Comparaison" et commencer à discuter avec l'assistant.
