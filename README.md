@@ -38,7 +38,7 @@ streamlit run frontend/🏠_Accueil.py
 
 ## Images de demonstration
 
-### Acceuil
+### Accueil
 
 ![Acceuil](captures_projet/accueil.png)
 
