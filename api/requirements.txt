@@ -1,0 +1,9 @@
+fastapi
+streamlit
+pydantic
+numpy
+langchain_huggingface
+langchain_community
+langchain_ollama
+langchain_core
+langchain_text_splitters

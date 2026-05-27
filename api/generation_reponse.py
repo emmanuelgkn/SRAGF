@@ -46,10 +46,10 @@ def generation_rep(chemin,question,local=True):
 
     response = model.invoke([HumanMessage(content=PROMPT)])
   
-    print("="*50)
-    for line in response.content.split(". "):
-        print(line.strip())
-    print("="*50,"\n")
+    # print("="*50)
+    # for line in response.content.split(". "):
+    #     print(line.strip())
+    # print("="*50,"\n")
 
     return f"{response.content}\n\n**Pages sources :** {list(np.unique(sources))}"
 
@@ -97,7 +97,7 @@ def generation_synthese(chemin,local=True):
         4. La clé "main_risks" doit être une liste (array) de chaînes de caractères.
         5. Si une information n'est pas dans le texte, mets "Non renseigné".
         """
-    print(PROMPT)
+    # print(PROMPT)
 
     response = model.invoke([HumanMessage(content=PROMPT)])
 
@@ -162,11 +162,11 @@ def generation_libre(t,local=True):
 
     response = model.invoke([HumanMessage(content=PROMPT)])
 
-    print("="*50)
-    print(response.content)
-    print("="*50)
-    print(formateur_formules_math(response.content))
-    print("="*50)
+    # print("="*50)
+    # print(response.content)
+    # print("="*50)
+    # print(formateur_formules_math(response.content))
+    # print("="*50)
 
 
     return f"{formateur_formules_math(response.content)}"

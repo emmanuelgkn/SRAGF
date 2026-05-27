@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 
-API_URL = "http://127.0.0.1:8000/demander_libre"
+API_URL = "http://localhost:8000/demander_libre"
 
 st.set_page_config(page_title="Chat libre", page_icon="🤖")
 st.title("🤖 Chat libre")
@@ -24,7 +24,7 @@ if prompt := st.chat_input("Ex: Donne la formulation du binome de newton"):
     st.session_state.messages.append({"role": "user", "content": prompt})
 
     with st.chat_message("assistant"):
-        with st.spinner("Recherche dans les documents..."):
+        with st.spinner("Rédaction de la réponse..."):
             try:
                 payload = {
                             "question": prompt

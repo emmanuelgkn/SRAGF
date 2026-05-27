@@ -2,13 +2,13 @@ import streamlit as st
 import requests
 import pandas as pd
 
-API_CHAT = "http://127.0.0.1:8000/demander_plusieurs"
-API_COMPARE = "http://127.0.0.1:8000/comparer"
+API_CHAT = "http://localhost:8000/demander_plusieurs"
+API_COMPARE = "http://localhost:8000/comparer"
 
 st.set_page_config(page_title="Analyse 2", page_icon="📑")
 st.title("📑 Comparer deux rapports")
 
-if "messages" not in st.session_state:
+if "messages_groupe" not in st.session_state:
     st.session_state.messages_groupe = []
 
 if "synthese_groupe" not in st.session_state:

@@ -1,8 +1,8 @@
 import streamlit as st
 import requests
 
-API_CHAT = "http://127.0.0.1:8000/demander"
-API_SYNTHESE = "http://127.0.0.1:8000/synthese"
+API_CHAT = "http://localhost:8000/demander"
+API_SYNTHESE = "http://localhost:8000/synthese"
 
 st.set_page_config(page_title="Analyse 1", page_icon="📈")
 st.title("📈 Analyser un rapport")
