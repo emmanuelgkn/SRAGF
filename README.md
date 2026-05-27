@@ -40,7 +40,7 @@ streamlit run frontend/🏠_Accueil.py
 
 ### Acceuil
 
-![Acceuil](captures_projet/acceuil.png)
+![Acceuil](captures_projet/accueil.png)
 
 ### Synthese d'un rapport
 
