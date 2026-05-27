@@ -1,29 +1,56 @@
-# 📊 Secured RAG for Finance (SRAGF)
+# Secured RAG for Finance (SRAGF)
 
-Un outil d'analyse et de comparaison de rapports financiers basé sur l'architecture RAG (Retrieval-Augmented Generation). Ce projet permet d'interagir avec des documents financiers complexes via un modèle de langage (LLM), tout en garantissant la confidentialité des données traitées.
+Ce projet est un outil d'analyse et de comparaison de rapports financiers basé sur l'architecture RAG (Retrieval-Augmented Generation). Ce projet permet d'interagir avec des documents financiers complexes via un modèle de langage (ici Qwen), tout en garantissant la confidentialité des données traitées.
 
-## ✨ Fonctionnalités Principales
+## Fonctionnalités Principales
 
-* **🔒 Analyse Confidentielle :** Traitement sécurisé des documents et rapports financiers sensibles pour éviter toute fuite de données.
+* **🔒 Analyse Confidentielle :** Traitement sécurisé des documents et rapports financiers sensibles pour éviter toute fuite de données cela se fait grâce à un traitement local des requettes.
 * **📈 Comparaison Annuelle :** Capacité à ingérer deux rapports financiers sur deux années consécutives pour générer une synthèse comparative des évolutions clés.
 * **💬 Interface Conversationnelle (Chat) :** Un assistant interactif permettant de poser des questions libres sur les documents analysés.
 * **🧮 Rendu des Formules :** Support avancé permettant au LLM d'afficher correctement et lisiblement les formules mathématiques ou financières directement dans le chat.
 
-## 🛠️ Stack Technique
+## Stack Technique
 
-
-* **Modèle / NLP :** Qwen2.5 7B
+* **Modèle / NLP :** Qwen2.5 7B avec ollama
 * **Orchestration RAG :** Langchain
 * **Backend :** Fastapi
 * **Interface Utilisateur :** Streamlit
 
+## Utilisation
 
-## 💻 Utilisation
-
-1. Lancer l'interface :
+1. Lancer le serveur ollama
 
 ```bash
-streamlit run interface_web/🏠_Accueil.py
+ollama serve
+```  
 
+2. Lancer l'api
+
+```bash
+fastapi dev api/api.py
 ```
+
+3. Lancer l'interface
+
+```bash
+streamlit run frontend/🏠_Accueil.py  
+```
+
+## Images de demonstration
+
+### Acceuil
+
+![Acceuil](captures_projet/acceuil.png)
+
+### Synthese d'un rapport
+
+![Synthese1rapport](captures_projet/synthese_un_doc.png)
+
+### Synthese de la comparaison
+
+![Synthese2rapport](captures_projet/synthese_deux_doc.png)
+
+### Chat libre
+
+![Chatlibre](captures_projet/chat_libre.png)
 
