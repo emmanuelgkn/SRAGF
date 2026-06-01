@@ -23,7 +23,6 @@ class RequeteChatPlusieurs(BaseModel):
     chemin_b: str
     question: str
 
-# On crée une route simple
 @app.post("/demander")
 def appeler_generation(requette: RequeteRAG):
     reponse = generation_rep(requette.chemin, requette.question)

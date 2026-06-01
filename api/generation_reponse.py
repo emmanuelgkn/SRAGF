@@ -105,12 +105,10 @@ def generation_synthese(chemin,local=True):
     texte_ia = re.sub(r"\s*```$", "", texte_ia)
 
     try:
-        # On essaie de transformer le texte en vrai objet Python
         synthese_dict = json.loads(texte_ia)
         return synthese_dict
         
     except json.JSONDecodeError:
-        # Si l'IA a complètement raté son formatage, on évite que l'application plante
         print("Erreur de parsing JSON. Texte brut renvoyé par l'IA :\n", texte_ia)
         return {
             "revenue": "Erreur d'extraction",
