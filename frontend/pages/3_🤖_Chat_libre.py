@@ -1,7 +1,10 @@
 import streamlit as st
 import requests
+import os
 
-API_URL = "http://localhost:8000/demander_libre"
+API = os.getenv("API_URL", "http://localhost:8000")
+
+API_URL = f"{API}/demander_libre"
 
 st.set_page_config(page_title="Chat libre", page_icon="🤖")
 st.title("🤖 Chat libre")

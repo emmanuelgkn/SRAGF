@@ -7,3 +7,13 @@ langchain_community
 langchain_ollama
 langchain_core
 langchain_text_splitters
+
+# J'ai commenté les libraires ci dessous car ils prennent beaucoup de temps à telecharger
+# vous devez les décommenter pour que toutes les pages marche sinon il y'aura que le chat 
+# libre qui pourra fonctionner.
+
+# pdfplumber
+# chromadb
+# sentence-transformers
+# uvicorn
+# sentencepiece

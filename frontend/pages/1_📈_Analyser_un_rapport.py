@@ -1,8 +1,10 @@
 import streamlit as st
 import requests
+import os 
 
-API_CHAT = "http://localhost:8000/demander"
-API_SYNTHESE = "http://localhost:8000/synthese"
+API = os.getenv("API_URL", "http://localhost:8000")
+API_CHAT = f"{API}/demander"
+API_SYNTHESE = f"{API}/synthese"
 
 st.set_page_config(page_title="Analyse 1", page_icon="📈")
 st.title("📈 Analyser un rapport")
@@ -23,11 +25,14 @@ with st.sidebar:
         st.session_state.messages = []
 
         with st.spinner("Génération de la sythèse..."):
-            reponse = requests.post(API_SYNTHESE,json={"chemin":chemin_doc})
-            if reponse.status_code == 200:
-                st.session_state.synthese = reponse.json()
-
-
+            try:
+                reponse = requests.post(API_SYNTHESE,json={"chemin":chemin_doc})
+                if reponse.status_code == 200:
+                    st.session_state.synthese = reponse.json()
+                else:
+                    st.error(f"Erreur API: {reponse.status_code} - {reponse.text}")
+            except requests.exceptions.ConnectionError:
+                st.error("Impossible de contacter l'API. Vérifie que le conteneur API tourne.")
 if st.session_state.synthese:
     st.subheader("Synthese rapide du rapport")
     data = st.session_state.synthese

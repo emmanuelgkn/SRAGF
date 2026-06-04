@@ -1,9 +1,11 @@
 import streamlit as st
 import requests
 import pandas as pd
+import os 
 
-API_CHAT = "http://localhost:8000/demander_plusieurs"
-API_COMPARE = "http://localhost:8000/comparer"
+API = os.getenv("API_URL", "http://localhost:8000")
+API_CHAT = f"{API}/demander_plusieurs"
+API_COMPARE = f"{API}/comparer"
 
 st.set_page_config(page_title="Analyse 2", page_icon="📑")
 st.title("📑 Comparer deux rapports")

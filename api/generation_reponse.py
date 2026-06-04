@@ -20,7 +20,8 @@ def generation_rep(chemin,question,local=True):
     sources = [doc.metadata['page'] for doc in resultats] 
 
     if local:
-        model = ChatOllama(model="qwen2.5")
+        base_url = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")                                                                             
+        model = ChatOllama(model="qwen2.5", base_url=base_url)
 
     else:
         llm = HuggingFaceEndpoint(repo_id="Qwen/Qwen2.5-14B-Instruct", 
@@ -67,7 +68,8 @@ def generation_synthese(chemin,local=True):
     # sources = [doc.metadata['page'] for doc, _score in resultats] 
 
     if local:
-        model = ChatOllama(model="qwen2.5")
+        base_url = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")                                                                             
+        model = ChatOllama(model="qwen2.5", base_url=base_url)
 
     else:
         llm = HuggingFaceEndpoint(repo_id="Qwen/Qwen2.5-14B-Instruct", 
@@ -146,7 +148,8 @@ def generation_libre(t,local=True):
     le format (s'il y a des formules mathématiques).
     """
     if local:
-        model = ChatOllama(model="qwen2.5")
+        base_url = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")                                                                             
+        model = ChatOllama(model="qwen2.5", base_url=base_url)
 
     else:
         llm = HuggingFaceEndpoint(repo_id="Qwen/Qwen2.5-14B-Instruct", 
@@ -186,7 +189,8 @@ def generation_comparaison(jsona, jsonb, local=True):
         """
     
     if local:
-        model = ChatOllama(model="qwen2.5")
+        base_url = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")                                                                             
+        model = ChatOllama(model="qwen2.5", base_url=base_url)
 
     else:
         llm = HuggingFaceEndpoint(repo_id="Qwen/Qwen2.5-14B-Instruct", 
@@ -228,7 +232,8 @@ def generation_multidoc(chemin_a, chemin_b, question,local=True):
     """
 
     if local:
-        model = ChatOllama(model="qwen2.5")
+        base_url = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")                                                                             
+        model = ChatOllama(model="qwen2.5", base_url=base_url)
 
     else:
         llm = HuggingFaceEndpoint(repo_id="Qwen/Qwen2.5-14B-Instruct", 

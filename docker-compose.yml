@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  api:
+    build: 
+      context: ./api
+    ports:
+      - "8000:8000"
+    environment:
+      - OLLAMA_BASE_URL=http://host.docker.internal:11434
+    volumes:
+      - ./rapports_fin_pdf:/app/rapports_fin_pdf
+      - ./captures_projet:/app/captures_projet
+
+  frontend:
+    build: 
+      context: ./frontend
+    ports:
+      - "8501:8501"
+    depends_on:
+      - api
+    environment:
+      - API_URL=http://api:8000
+    volumes:
+       - ./rapports_fin_pdf:/app/rapports_fin_pdf     
