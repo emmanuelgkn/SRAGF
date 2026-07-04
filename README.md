@@ -13,7 +13,7 @@ Ce projet est un outil d'analyse et de comparaison de rapports financiers basé 
 
 ## Stack Technique
 
-* **Modèle / NLP :** Qwen2.5 (en local via Ollama) ou Qwen2.5-14B-Instruct (via API HuggingFace)
+* **Modèle / NLP :** Qwen2.5 (en local via Ollama) ou Qwen2.5-72B-Instruct (via API HuggingFace)
 * **Orchestration RAG :** Langchain
 * **Backend :** Fastapi
 * **Interface Utilisateur :** Streamlit

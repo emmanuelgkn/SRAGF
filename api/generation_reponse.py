@@ -24,7 +24,7 @@ def generation_rep(chemin,question,local=True):
         model = ChatOllama(model="qwen2.5", base_url=base_url)
 
     else:
-        llm = HuggingFaceEndpoint(repo_id="Qwen/Qwen2.5-14B-Instruct", 
+        llm = HuggingFaceEndpoint(repo_id="Qwen/Qwen2.5-72B-Instruct", 
                                   temperature=0.1,
                                   )
         model = ChatHuggingFace(llm=llm)
@@ -72,7 +72,7 @@ def generation_synthese(chemin,local=True):
         model = ChatOllama(model="qwen2.5", base_url=base_url)
 
     else:
-        llm = HuggingFaceEndpoint(repo_id="Qwen/Qwen2.5-14B-Instruct", 
+        llm = HuggingFaceEndpoint(repo_id="Qwen/Qwen2.5-72B-Instruct", 
                                   temperature=0.1,
                                   )
         model = ChatHuggingFace(llm=llm)
@@ -152,7 +152,7 @@ def generation_libre(t,local=True):
         model = ChatOllama(model="qwen2.5", base_url=base_url)
 
     else:
-        llm = HuggingFaceEndpoint(repo_id="Qwen/Qwen2.5-14B-Instruct", 
+        llm = HuggingFaceEndpoint(repo_id="Qwen/Qwen2.5-72B-Instruct", 
                                   temperature=0.1,
                                   )
         model = ChatHuggingFace(llm=llm)
@@ -193,7 +193,7 @@ def generation_comparaison(jsona, jsonb, local=True):
         model = ChatOllama(model="qwen2.5", base_url=base_url)
 
     else:
-        llm = HuggingFaceEndpoint(repo_id="Qwen/Qwen2.5-14B-Instruct", 
+        llm = HuggingFaceEndpoint(repo_id="Qwen/Qwen2.5-72B-Instruct", 
                                   temperature=0.1,
                                   )
         model = ChatHuggingFace(llm=llm)
@@ -236,7 +236,7 @@ def generation_multidoc(chemin_a, chemin_b, question,local=True):
         model = ChatOllama(model="qwen2.5", base_url=base_url)
 
     else:
-        llm = HuggingFaceEndpoint(repo_id="Qwen/Qwen2.5-14B-Instruct", 
+        llm = HuggingFaceEndpoint(repo_id="Qwen/Qwen2.5-72B-Instruct", 
                                   temperature=0.1,
                                   )
         model = ChatHuggingFace(llm=llm)
